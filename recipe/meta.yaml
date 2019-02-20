@@ -25,12 +25,6 @@ requirements:
 test:
   imports:
     - static_frame
-  requires:
-    - pytest
-    - hypothesis
-    - pandas
-  commands:
-    - pytest --pyargs static_frame
 
 about:
   home: https://github.com/InvestmentSystems/static-frame
