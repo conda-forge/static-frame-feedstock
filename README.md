@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About static-frame
 ==================
 
@@ -14,7 +10,7 @@ Feedstock license: BSD 3-Clause
 Summary: Immutable structures for one- and two-dimensional calculations with labelled axis
 
 The StaticFrame library consists of the Series and Frame, immutable data structures
-for one- and two-dimensional calculations with self-aligning, labelled axis.
+for one- and two-dimensional calculations with self-aligning, labelled axes.
 StaticFrame offers an alternative to Pandas. While many interfaces for data
 extraction and manipulation are similar to Pandas, StaticFrame deviates from Pandas
 in many ways: all data is immutable, and all indices must be unique; all vector
@@ -27,8 +23,14 @@ with built-in options for parallelization, are provided.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/static-frame-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/static-frame-feedstock)
+
+<table><tr>
+    <td>All platforms:</td>
+    <td>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
