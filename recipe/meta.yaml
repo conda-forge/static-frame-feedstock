@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 48684cd48341a3a985f44e87a40944b766adb5699ab7395c34110b3dd0b35f3e
+  sha256: b509c164c83db28b609a701189e39272539a73710e55542efe01c9d3dc650293
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ about:
 
   description: |
     The StaticFrame library consists of the Series and Frame, immutable data structures
-    for one- and two-dimensional calculations with self-aligning, labelled axis.
+    for one- and two-dimensional calculations with self-aligning, labelled axes.
     StaticFrame offers an alternative to Pandas. While many interfaces for data
     extraction and manipulation are similar to Pandas, StaticFrame deviates from Pandas
     in many ways: all data is immutable, and all indices must be unique; all vector
