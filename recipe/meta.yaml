@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f6d1d372d28eddc0f7e78c24eab09823280a124776947e70f48d9167c2144af8
+  sha256: ff7551e817f355dd993977aba0194ae4cb4d8ca2066336945ce721803f229e6d
 
 build:
   noarch: python
@@ -48,3 +48,5 @@ about:
 extra:
   recipe-maintainers:
     - flexatone
+    - brandtbucher
+
