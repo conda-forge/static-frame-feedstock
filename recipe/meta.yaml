@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8aeeac950bbe07154d9bbc549e37af1be6c5b5c754858c1f67bf6613a0700694
+  sha256: b345b82ea9c4e8605e27268e4f668eb456d2ad2d9c0d948dd65cc74b8886cca7
 
 
 build:
