@@ -9,15 +9,11 @@ Feedstock license: BSD 3-Clause
 
 Summary: Immutable structures for one- and two-dimensional calculations with labelled axis
 
-The StaticFrame library consists of the Series and Frame, immutable data structures
-for one- and two-dimensional calculations with self-aligning, labelled axes.
-StaticFrame offers an alternative to Pandas. While many interfaces for data
-extraction and manipulation are similar to Pandas, StaticFrame deviates from Pandas
-in many ways: all data is immutable, and all indices must be unique; all vector
-processing uses NumPy, and the full range of NumPy data types is preserved;
-the implementation is concise and lightweight; consistent naming and interfaces
-are used throughout; and flexible approaches to iteration and function application,
-with built-in options for parallelization, are provided.
+The StaticFrame library defines the Series and Frame, immutable data structures for one- and two-dimensional calculations with self-aligning, labelled axes. StaticFrame meets the need for an immutable, Pandas-like DataFrame with a modern and interface. StaticFrame is suitable for applications in data science, data engineering, finance, scientific computing, and related fields where reducing opportunities for error by prohibiting mutation is critical.
+
+While many interfaces are similar to Pandas, StaticFrame deviates from Pandas in many ways: all data is immutable, and all indices are unique; the full range of NumPy data types is preserved, and date-time indices use discrete NumPy types; hierarchical indices are seamlessly integrated; and uniform approaches to element, row, and column iteration and function application are provided. Core StaticFrame depends only on NumPy: Pandas is not a dependency.
+
+A wide variety of table storage and representation formats are supported, including input from and output to CSV, TSV, JSON, Excel XLSX, SQLite, HDF5, NumPy, Pandas, Arrow, and Parquet; additionally, output to xarray, HTML, RST, Markdown, and LaTeX is supported, as well as HTML representations in Jupyter notebooks. The Bus, a container of Frames, permits writing to and lazily reading from multi-table storage formats, including zipped pickles, XLSX workbooks, SQLite, and HDF5.
 
 
 Current build status
