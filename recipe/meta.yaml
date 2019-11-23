@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c5d47d1745c1112fca66cce1b1b0eb98472213f79d7f0a4ae9ab235b42c8f4e
+  sha256: 1d86365e762f5ed8db1fd9ea05c2bd7e2945ca9daa46ab297d02eeed0602e452
 
 
 build:
@@ -31,6 +31,7 @@ about:
   home: https://github.com/InvestmentSystems/static-frame
   license: MIT
   license_family: MIT
+  license_file: LICENSE.txt
   summary: 'Immutable structures for one- and two-dimensional calculations with labelled axis'
 
   description: |
