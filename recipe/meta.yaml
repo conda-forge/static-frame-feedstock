@@ -22,6 +22,7 @@ requirements:
   run:
     - python >=3.6
     - numpy >=1.16.5
+    - automap >=0.4.8
 
 test:
   imports:
