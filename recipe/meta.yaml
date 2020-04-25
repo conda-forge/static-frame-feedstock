@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "0.5.4" %}
+{% set version = "0.6.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1d86365e762f5ed8db1fd9ea05c2bd7e2945ca9daa46ab297d02eeed0602e452
-
+  sha256: 80cd6652191710a6319c5ae8fff0279d08b0a9d45fc4fa8e4d3d6316efcc3a88
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -22,6 +21,7 @@ requirements:
   run:
     - python >=3.6
     - numpy >=1.16.5
+    - automap >=0.4.8
 
 test:
   imports:
@@ -30,9 +30,9 @@ test:
 about:
   home: https://github.com/InvestmentSystems/static-frame
   license: MIT
-  license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Immutable structures for one- and two-dimensional calculations with labelled axis'
+  license_family: MIT
+  summary: Immutable structures for one- and two-dimensional calculations with labelled axis
 
   description: |
     The StaticFrame library defines the Series and Frame, immutable data structures for one- and two-dimensional calculations with self-aligning, labelled axes. StaticFrame meets the need for an immutable, Pandas-like DataFrame with a modern and interface. StaticFrame is suitable for applications in data science, data engineering, finance, scientific computing, and related fields where reducing opportunities for error by prohibiting mutation is critical.
