@@ -5,7 +5,7 @@ Home: https://github.com/InvestmentSystems/static-frame
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Immutable structures for one- and two-dimensional calculations with labelled axis
 
