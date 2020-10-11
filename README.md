@@ -5,9 +5,13 @@ Home: https://github.com/InvestmentSystems/static-frame
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/static-frame-feedstock/blob/master/LICENSE.txt)
 
 Summary: Immutable structures for one- and two-dimensional calculations with labelled axis
+
+Development: https://github.com/InvestmentSystems/static-frame
+
+Documentation: https://static-frame.readthedocs.io
 
 The StaticFrame library defines the Series and Frame, immutable data structures for one- and two-dimensional calculations with self-aligning, labelled axes. StaticFrame meets the need for an immutable, Pandas-like DataFrame with a modern and interface. StaticFrame is suitable for applications in data science, data engineering, finance, scientific computing, and related fields where reducing opportunities for error by prohibiting mutation is critical.
 
