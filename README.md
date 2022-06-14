@@ -5,7 +5,7 @@ Home: https://github.com/InvestmentSystems/static-frame
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/static-frame-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/static-frame-feedstock/blob/main/LICENSE.txt)
 
 Summary: Immutable structures for one- and two-dimensional calculations with labelled axis
 
@@ -13,11 +13,13 @@ Development: https://github.com/InvestmentSystems/static-frame
 
 Documentation: https://static-frame.readthedocs.io
 
-The StaticFrame library defines the Series and Frame, immutable data structures for one- and two-dimensional calculations with self-aligning, labelled axes. StaticFrame meets the need for an immutable, Pandas-like DataFrame with a modern and interface. StaticFrame is suitable for applications in data science, data engineering, finance, scientific computing, and related fields where reducing opportunities for error by prohibiting mutation is critical.
+A library of immutable and grow-only Pandas-like DataFrames with a more explicit and consistent interface. StaticFrame is suitable for applications in data science, data engineering, finance, scientific computing, and related fields where reducing opportunities for error by prohibiting in-place mutation is critical.
 
-While many interfaces are similar to Pandas, StaticFrame deviates from Pandas in many ways: all data is immutable, and all indices are unique; the full range of NumPy data types is preserved, and date-time indices use discrete NumPy types; hierarchical indices are seamlessly integrated; and uniform approaches to element, row, and column iteration and function application are provided. Core StaticFrame depends only on NumPy: Pandas is not a dependency.
+While many interfaces are similar to Pandas, StaticFrame deviates from Pandas in many ways: all data is immutable, and all indices are unique; the full range of NumPy data types is preserved, and date-time indices use discrete NumPy types; hierarchical indices are seamlessly integrated; and uniform approaches to element, row, and column iteration and function application are provided. Core StaticFrame depends only on NumPy and two C-extension packages (maintained by the StaticFrame team): Pandas is not a dependency.
 
-A wide variety of table storage and representation formats are supported, including input from and output to CSV, TSV, JSON, Excel XLSX, SQLite, HDF5, NumPy, Pandas, Arrow, and Parquet; additionally, output to xarray, HTML, RST, Markdown, and LaTeX is supported, as well as HTML representations in Jupyter notebooks. The Bus, a container of Frames, permits writing to and lazily reading from multi-table storage formats, including zipped pickles, XLSX workbooks, SQLite, and HDF5.
+A wide variety of table storage and representation formats are supported, including input from and output to CSV, TSV, JSON, MessagePack, Excel XLSX, SQLite, HDF5, NumPy, Pandas, Arrow, and Parquet; additionally, output to xarray, HTML, RST, Markdown, and LaTeX is supported, as well as HTML representations in Jupyter notebooks.
+
+StaticFrame features a family of multi-table containers: the Bus is lazily loaded container of tables, the Batch is a deferred processor of tables, and the Quilt is a virtual concatenation of tables. All permit operating on large collections of tables with minimal memory overhead, as well as writing too and reading from zipped bundles of pickles, Parquet, or delimited files, as well as XLSX workbooks, SQLite, and HDF5.
 
 
 Current build status
@@ -26,8 +28,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6190&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/static-frame-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6190&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/static-frame-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -50,23 +52,49 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `static-frame` can be installed with:
+Once the `conda-forge` channel has been enabled, `static-frame` can be installed with `conda`:
 
 ```
 conda install static-frame
 ```
 
-It is possible to list all of the versions of `static-frame` available on your platform with:
+or with `mamba`:
+
+```
+mamba install static-frame
+```
+
+It is possible to list all of the versions of `static-frame` available on your platform with `conda`:
 
 ```
 conda search static-frame --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search static-frame --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search static-frame --channel conda-forge
+
+# List packages depending on `static-frame`:
+mamba repoquery whoneeds static-frame --channel conda-forge
+
+# List dependencies of `static-frame`:
+mamba repoquery depends static-frame --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -76,10 +104,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
