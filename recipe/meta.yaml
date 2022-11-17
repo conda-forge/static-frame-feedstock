@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "0.9.20" %}
+{% set version = "0.9.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 77ae5316355d6cf396f00d0e003581507819381460cdc7233a5f6ba8fa929e15
+  sha256: 888b5422c28dd7fcea5cc5e25cf183bdc1bd9da24f347ef3bf0226483a3ae156
 
 build:
   noarch: python
@@ -20,9 +20,9 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - numpy >=1.17.4
-    - automap >=0.5.1
-    - arraykit >=0.1.8
+    - numpy >=1.18.5
+    - automap >=0.6.2
+    - arraykit >=0.2.3
 
 test:
   imports:
@@ -44,9 +44,10 @@ about:
 
     StaticFrame features a family of multi-table containers: the Bus is a lazily-loaded container of tables, the Batch is a deferred processor of tables, the Yarn is virtual concatenation of many Buses, and the Quilt is a virtual concatenation of all tables within a single Bus or Yarn. All permit operating on large collections of tables with minimal memory overhead, as well as writing too and reading from zipped bundles of pickles, NPZ, Parquet, or delimited files, as well as XLSX workbooks, SQLite, and HDF5.
   doc_url: https://static-frame.readthedocs.io
-  dev_url: https://github.com/InvestmentSystems/static-frame
+  dev_url: https://github.com/static-frame/static-frame
 
 extra:
   recipe-maintainers:
     - flexatone
     - brandtbucher
+    - chaburkland
