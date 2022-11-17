@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python>=3.7
+    - python >=3.7
     - pip
   run:
-    - python>=3.7
-    - numpy>=1.18.5
-    - automap>=0.6.2
-    - arraykit>=0.2.3
+    - python >=3.7
+    - numpy >=1.18.5
+    - automap >=0.6.2
+    - arraykit >=0.2.3
 
 test:
   imports:
