@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/static-frame-fe
 
 Summary: Immutable and grow-only Pandas-like DataFrames with a more explicit and consistent interface
 
-Development: https://github.com/InvestmentSystems/static-frame
+Development: https://github.com/static-frame/static-frame
 
 Documentation: https://static-frame.readthedocs.io
 
@@ -157,5 +157,6 @@ Feedstock Maintainers
 =====================
 
 * [@brandtbucher](https://github.com/brandtbucher/)
+* [@chaburkland](https://github.com/chaburkland/)
 * [@flexatone](https://github.com/flexatone/)
 
