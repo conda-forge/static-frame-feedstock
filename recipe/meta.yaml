@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -21,8 +21,8 @@ requirements:
   run:
     - python >=3.7
     - numpy >=1.18.5
-    - automap >=0.6.2
-    - arraykit >=0.2.3
+    - automap ==0.6.2
+    - arraykit ==0.3.4
 
 test:
   imports:
