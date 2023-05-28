@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "1.3.2" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ce66df6e0dcd664e1faff17c1cd4bd7758e6b2319024c86ec38c3889e1cb1ec4
+  sha256: 639dd41e666a4c1c50332baabbd8a8b7d4b80935c125ee8eea39847056eda90c
 
 build:
   noarch: python
@@ -21,15 +21,15 @@ requirements:
   run:
     - python >=3.7
     - numpy >=1.18.5
-    - automap ==0.6.2
-    - arraykit ==0.3.4
+    - arraymap ==0.1.9
+    - arraykit ==0.4.8
 
 test:
   imports:
     - static_frame
 
 about:
-  home: https://github.com/InvestmentSystems/static-frame
+  home: https://github.com/static-frame/static-frame
   license: MIT
   license_file: LICENSE.txt
   license_family: MIT
