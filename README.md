@@ -3,7 +3,7 @@ About static-frame-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/static-frame-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/InvestmentSystems/static-frame
+Home: https://github.com/static-frame/static-frame
 
 Package license: MIT
 
