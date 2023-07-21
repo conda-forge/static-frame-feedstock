@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "1.4.6" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
-    - numpy >=1.18.5
+    - python >=3.8
+    - numpy >=1.19.5
     - arraymap ==0.1.9
     - arraykit ==0.4.9
 
