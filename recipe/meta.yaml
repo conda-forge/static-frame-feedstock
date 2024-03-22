@@ -19,11 +19,11 @@ requirements:
     - python >=3.8
     - pip
   run:
-    - python >=3.8
-    - numpy >=1.19.5
+    - python >=3.9
+    - numpy >=1.23.5
     - arraymap ==0.2.2
     - arraykit ==0.5.1
-    - typing-extensions >=4.7.1
+    - typing-extensions >=4.10.0
 
 test:
   imports:
