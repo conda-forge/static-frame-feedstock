@@ -1,5 +1,5 @@
 {% set name = "static-frame" %}
-{% set version = "2.12.0" %}
+{% set version = "2.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5b19e7a91fb695861fc72092f5cd1906e1e1b3ef568beaf97ae0c8f7c121a7f6
+  sha256: 22efdfd0139b568ea20f2062f22dc7752e1f89cc8664f047e9d33b1bca2aad4a
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - python >=3.9
     - numpy >=1.23.5
     - arraymap ==0.3.0
-    - arraykit ==0.8.3
+    - arraykit ==0.9.0
     - typing-extensions >=4.12.0
 
 test:
