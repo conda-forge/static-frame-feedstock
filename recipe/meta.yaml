@@ -11,22 +11,24 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy >=1.23.5
     - arraymap ==0.3.0
     - arraykit ==0.9.0
     - typing-extensions >=4.12.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - static_frame
 
