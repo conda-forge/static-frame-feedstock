@@ -16,14 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.10
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >=3.10
     - numpy >=1.23.5
-    - arraymap ==0.3.0
-    - arraykit ==0.9.0
+    - arraykit ==1.0.8
     - typing-extensions >=4.12.0
 
 test:
