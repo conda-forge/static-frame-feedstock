@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.10
     - numpy >=1.24.3
-    - arraykit ==1.7.0
+    - arraykit ==1.12.0
     - typing-extensions >=4.12.0
 
 test:
@@ -48,7 +48,6 @@ about:
     * 🚀 Optimized Serialization & Memory Mapping: Fast disk I/O with custom NPZ and NPY encodings.
     * 💼 Multi-Table Containers: The ``Bus`` and ``Yarn`` provide interfaces to collections of tables with lazy data loading, well-suited for large datasets.
     * ⏳ Deferred Processing: The ``Batch`` provides a common interface for deferred processing of groups, windows, or any iterator.
-    * 🪶 Lean Dependencies: Core functionality relies only on NumPy and team-maintained C-extensions.
     * 📚 Comprehensive Documentation: All API endpoints documented with thousands of easily runnable examples.
 
   doc_url: https://static-frame.readthedocs.io
